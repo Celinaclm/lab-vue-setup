@@ -11,8 +11,10 @@ module.exports = {
     parser: '@babel/eslint-parser',
   },
   rules: {
+    'linebreak-style': 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-trailing-whitespace': true,
+    'no-trailing-whitespace': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'jsx-a11y/label-has-for': 0,
   },
 };

@@ -1,32 +1,37 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Hola mundo!" />
+    <h1>To-Do List</h1>
+    <ul>
+       <li>
+        <to-do-item label="My ToDo Item"></to-do-item>
+      </li>
+    </ul>
   </div>
 </template>
+<script>
+import HelloWorld from './components/HelloWorld.vue';
+import ToDoItem from './components/ToDoItem.vue';
 
+export default {
+  name: 'App',
+  components: {
+    HelloWorld,
+    ToDoItem,
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #2C3E50;
+  margin-top: 60px;
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+h1 {
+  color:royalblue;
 }
 </style>
